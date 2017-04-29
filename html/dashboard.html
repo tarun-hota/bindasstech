@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>F3holdinds</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!--base css styles-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!--page specific css styles-->
+
+<!--flaty css styles-->
+<link rel="stylesheet" href="css/flaty.css">
+<link rel="stylesheet" href="css/flaty-responsive.css">
+
+<link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+
+<!-- BEGIN Navbar -->
+<div id="navbar" class="navbar">
+<button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
+<span class="fa fa-bars"></span>
+</button>
+<a class="navbar-brand" href="#">
+<img src="images/logo1.png" alt="logo" />
+</a>
+<div class="dashboard-txt"><div class="dashboard-txt1">Super Administrator</div>
+<!-- BEGIN Navbar Buttons -->
+<ul class="nav flaty-nav pull-right">
+<li>
+<a href="#"><i class="fa fa-globe"></i>View Site</a></li>
+<!-- BEGIN Button User -->
+<li class="user-profile">
+<a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+<img class="nav-user-photo" src="images/avatar1.jpg" alt="Penny's Photo" />
+<span class="hhh" id="user_info">
+Penny
+</span>
+<i class="fa fa-caret-down"></i>
+</a>
+
+<!-- BEGIN User Dropdown -->
+<ul class="dropdown-menu dropdown-navbar" id="user_menu">
+<li class="nav-header">
+<i class="fa fa-clock-o"></i>
+Logined From 20:45
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-cog"></i>
+Account Settings
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-user"></i>
+Edit Profile
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-question"></i>
+Help
+</a>
+</li>
+
+<li class="divider visible-xs"></li>
+
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-tasks"></i>
+Tasks
+<span class="badge badge-warning">4</span>
+</a>
+</li>
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-bell"></i>
+Notifications
+<span class="badge badge-important">8</span>
+</a>
+</li>
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-envelope"></i>
+Messages
+<span class="badge badge-success">5</span>
+</a>
+</li>
+
+<li class="divider"></li>
+
+<li>
+<a href="#">
+<i class="fa fa-off"></i>
+Logout
+</a>
+</li>
+</ul>
+<!-- BEGIN User Dropdown -->
+</li>
+<!-- END Button User -->
+</ul>
+<!-- END Navbar Buttons -->
+</div></div>
+<!-- END Navbar -->
+
+<!-- BEGIN Container -->
+<div class="container" id="main-container">
+<!-- BEGIN Sidebar -->
+<div id="sidebar" class="navbar-collapse collapse">
+<!-- BEGIN Navlist -->
+<ul class="nav nav-list">
+<li class="active">
+<a href="index.html">
+<i class="fa fa-dashboard"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-home"></i>
+<span>Properties</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Property List</a></li>
+<li><a href="#">Add Property</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-user"></i>
+<span>Administrator</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Administrator List</a></li>
+<li><a href="#">Create Administrator</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-usd"></i>
+<span>Investors</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-users"></i>
+<span>Request User</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-money"></i>
+<span>Request Investors</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="box.html">
+<i class="fa fa-file"></i>
+<span>Reports</span>
+</a>
+</li>
+
+<li>
+<a href="calendar.html">
+<i class="fa fa-question"></i>
+<span>Help</span>
+</a>
+</li>
+</ul>
+<!-- END Navlist -->
+
+<!-- BEGIN Sidebar Collapse Button -->
+<div id="sidebar-collapse" class="visible-lg">
+<i class="fa fa-angle-double-left"></i>
+</div>
+<!-- END Sidebar Collapse Button -->
+</div>
+<!-- END Sidebar -->
+
+<!-- BEGIN Content -->
+<div id="main-content">
+<!-- BEGIN Page Title -->
+<div class="page-title">
+<div>
+<h1><i class="fa fa-file-o"></i> Dashboard</h1>
+<h4>Overview, stats, chat and more</h4>
+</div>
+</div>
+<!-- END Page Title -->
+
+<!-- BEGIN Breadcrumb -->
+<div id="breadcrumbs">
+<ul class="breadcrumb">
+<li class="active"><i class="fa fa-home"></i> Home</li>
+</ul>
+</div>
+<!-- END Breadcrumb -->
+
+
+<!-- BEGIN Tiles -->
+<div class="row">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4">
+<div class="tile tile-gray">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tile tile-gray1">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tile tile-gray">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4">
+<div class="tile tile-gray1">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tile tile-gray">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="tile tile-gray1">
+<p class="title">FLATY - Responsive Admin Template</p>
+<p>Based on twitter bootstrap, 9 predefined color, clean and minimal design, easy to change and etc.</p>
+<div class="img img-bottom">
+<i class="fa fa-desktop"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END Tiles -->
+
+
+<!-- BEGIN Main Content -->
+<div class="row">
+<div class="col-md-7">
+<div class="box box-black">
+<div class="box-title">
+<h3>Contact Messages</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#" style="float:right"><i class="fa fa-chevron-up"></i></a>
+<div class="viewall-txt"><a href="">View All</a></div>
+</div>
+</div>
+<div class="box-content">
+<ul class="messages slimScroll" style="height: 300px">
+<li>
+<img src="images/avatar2.jpg" alt="">
+<div>
+<div>
+<h5>David</h5>
+<span class="time"><i class="fa fa-clock-o"></i> 26 minutes ago</span>
+</div>
+<p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure ...</p>
+</div>
+</li>
+<li>
+<img src="images/avatar3.jpg" alt="">
+<div>
+<div>
+<h5>Sarah</h5>
+<span class="time"><i class="fa fa-clock-o"></i> 1 days ago</span>
+</div>
+<p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa.</p>
+</div>
+</li>
+<li>
+<img src="images/avatar4.jpg" alt="">
+<div>
+<div>
+<h5>Emma</h5>
+<span class="time"><i class="fa fa-clock-o"></i> 4 days ago</span>
+</div>
+<p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+</div>
+</li>
+<li>
+<img src="images/avatar5.jpg" alt="">
+<div>
+<div>
+<h5>John</h5>
+<span class="time"><i class="fa fa-clock-o"></i> 2 weeks ago</span>
+</div>
+<p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem...</p>
+</div>
+</li>
+<li>
+<img src="images/avatar1.jpg" alt="">
+<div>
+<div>
+<h5>Penny <span class="label label-info">Admin</span></h5>
+<span class="time"><i class="fa fa-clock-o"></i> 14 July</span>
+</div>
+<p>Lorem ipsum commodo quis dolor voluptate et in Excepteur. Lorem ipsum amet dolor qui cupidatat in anim reprehenderit quis id culpa consequat non culpa. Lorem ipsum in culpa aliquip incididunt cupidatat dolore irure cupidatat aute cupidatat quis nulla.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-5">
+<div class="box box-black">
+<div class="box-title">
+<h3>Summary</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+<div class="box-content">
+<ul class="things-to-do">
+<li>
+<p>
+<i class="fa fa-eye"></i>
+<span class="value">4</span>
+Visitors
+</p>
+</li>
+<li>
+<p>
+<i class="fa fa-usd"></i>
+<span class="value">4</span>
+Investors
+</p>
+</li>
+<li>
+<p>
+<i class="fa fa-user"></i>
+<span class="value">7</span>
+Admin Users
+</p>
+</li>
+<li>
+<p>
+<i class="fa fa-money"></i>
+<span class="value">4</span>
+Investment
+</p>
+</li>
+<li>
+<p>
+<i class="fa fa-check"></i>
+<span class="value">3</span>
+Active Properties
+</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="box box-black">
+<div class="box-title">
+<h3>Request Investers</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#" style="float:right"><i class="fa fa-chevron-up"></i></a>
+<div class="viewall-txt"><a href="">View All</a></div>
+</div>
+</div>
+<div class="box-content">
+<ul class="messages slimScroll" style="height: 300px">
+<li>
+<img src="images/avatar2.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar3.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar2.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar3.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="box box-black">
+<div class="box-title">
+<h3>Request Buyers</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#" style="float:right;"><i class="fa fa-chevron-up"></i></a>
+<div class="viewall-txt"><a href="">View All</a></div>
+</div>
+</div>
+<div class="box-content">
+<ul class="messages slimScroll" style="height: 300px">
+<li>
+<img src="images/avatar2.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar3.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar2.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+<li>
+<img src="images/avatar3.jpg" alt="">
+<div>
+<p><strong>Name:</strong> Jone</p>
+<p><strong>Phone:</strong> 121 121 121</p>
+<p><strong>Email:</strong> Jone@xxx.com</p>
+<p><strong>Comments:</strong> Lorem ipsum commodo quis dolor voluptate et in Excepteur.</p>
+<div class="viewall-txt1"><a href="">View Detail</a></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- END Main Content -->
+
+<footer>
+<p>2015 &copy; F3holding Admin Template.</p>
+</footer>
+
+<a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+<!-- END Content -->
+</div>
+<!-- END Container -->
+
+
+<!--basic scripts-->
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+<!--page specific plugin scripts-->
+<script src="js/jquery.flot.js"></script>
+<script src="js/jquery.flot.resize.js"></script>
+<script src="js/jquery.flot.pie.js"></script>
+<script src="js/jquery.flot.stack.js"></script>
+<script src="js/jquery.flot.crosshair.js"></script>
+<script src="js/jquery.flot.tooltip.min.js"></script>
+<script src="js/jquery.sparkline.min.js"></script>
+
+<!--flaty scripts-->
+<script src="js/flaty.js"></script>
+<script src="js/flaty-demo-codes.js"></script>
+
+</body>
+</html>

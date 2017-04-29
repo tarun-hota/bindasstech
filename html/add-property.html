@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>F3holdinds</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!--base css styles-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!--page specific css styles-->
+<link rel="stylesheet" type="text/css" href="css/chosen.min.css">
+
+<!--flaty css styles-->
+<link rel="stylesheet" href="css/flaty.css">
+<link rel="stylesheet" href="css/flaty-responsive.css">
+
+<link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+
+
+<!-- BEGIN Navbar -->
+<div id="navbar" class="navbar">
+<button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
+<span class="fa fa-bars"></span>
+</button>
+<a class="navbar-brand" href="#">
+<img src="images/logo1.png" alt="logo" />
+</a>
+<div class="dashboard-txt"><div class="dashboard-txt1">Super Administrator</div>
+<!-- BEGIN Navbar Buttons -->
+<ul class="nav flaty-nav pull-right">
+<li>
+<a href="#"><i class="fa fa-globe"></i>View Site</a></li>
+<!-- BEGIN Button User -->
+<li class="user-profile">
+<a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+<img class="nav-user-photo" src="images/avatar1.jpg" alt="Penny's Photo" />
+<span class="hhh" id="user_info">
+Penny
+</span>
+<i class="fa fa-caret-down"></i>
+</a>
+
+<!-- BEGIN User Dropdown -->
+<ul class="dropdown-menu dropdown-navbar" id="user_menu">
+<li class="nav-header">
+<i class="fa fa-clock-o"></i>
+Logined From 20:45
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-cog"></i>
+Account Settings
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-user"></i>
+Edit Profile
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa fa-question"></i>
+Help
+</a>
+</li>
+
+<li class="divider visible-xs"></li>
+
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-tasks"></i>
+Tasks
+<span class="badge badge-warning">4</span>
+</a>
+</li>
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-bell"></i>
+Notifications
+<span class="badge badge-important">8</span>
+</a>
+</li>
+<li class="visible-xs">
+<a href="#">
+<i class="fa fa-envelope"></i>
+Messages
+<span class="badge badge-success">5</span>
+</a>
+</li>
+
+<li class="divider"></li>
+
+<li>
+<a href="#">
+<i class="fa fa-off"></i>
+Logout
+</a>
+</li>
+</ul>
+<!-- BEGIN User Dropdown -->
+</li>
+<!-- END Button User -->
+</ul>
+<!-- END Navbar Buttons -->
+</div></div>
+<!-- END Navbar -->
+
+<!-- BEGIN Container -->
+<div class="container" id="main-container">
+<!-- BEGIN Sidebar -->
+<div id="sidebar" class="navbar-collapse collapse">
+<!-- BEGIN Navlist -->
+<ul class="nav nav-list">
+<li class="active">
+<a href="index.html">
+<i class="fa fa-dashboard"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-home"></i>
+<span>Properties</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Property List</a></li>
+<li><a href="#">Add Property</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-user"></i>
+<span>Administrator</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Administrator List</a></li>
+<li><a href="#">Create Administrator</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-usd"></i>
+<span>Investors</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-users"></i>
+<span>Request User</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-money"></i>
+<span>Request Investors</span>
+<b class="arrow fa fa-angle-right"></b>
+</a>
+
+<!-- BEGIN Submenu -->
+<ul class="submenu">
+<li><a href="#">Demo</a></li>
+<li><a href="#">Demo1</a></li>
+</ul>
+<!-- END Submenu -->
+</li>
+
+<li>
+<a href="box.html">
+<i class="fa fa-file"></i>
+<span>Reports</span>
+</a>
+</li>
+
+<li>
+<a href="calendar.html">
+<i class="fa fa-question"></i>
+<span>Help</span>
+</a>
+</li>
+</ul>
+<!-- END Navlist -->
+
+<!-- BEGIN Sidebar Collapse Button -->
+<div id="sidebar-collapse" class="visible-lg">
+<i class="fa fa-angle-double-left"></i>
+</div>
+<!-- END Sidebar Collapse Button -->
+</div>
+<!-- END Sidebar -->
+
+<!-- BEGIN Content -->
+<div id="main-content">
+<!-- BEGIN Page Title -->
+<div class="page-title">
+<div>
+<h1><i class="fa fa-file-o"></i> Add Property</h1>
+</div>
+</div>
+<!-- END Page Title -->
+
+<!-- BEGIN Breadcrumb -->
+<div id="breadcrumbs">
+<ul class="breadcrumb">
+<li>
+<i class="fa fa-home"></i>
+<a href="#">Properties</a>
+<span class="divider"><i class="fa fa-angle-right"></i></span>
+</li>
+<li class="active">Add Property</li>
+</ul>
+</div>
+<!-- END Breadcrumb -->
+
+<!-- BEGIN Main Content -->
+<div class="row">
+<div class="col-md-12">
+<div class="box box-black">
+<div class="box-title">
+<h3>Basic Information</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+<div class="box-content">
+<form action="#" class="form-horizontal" id="validation-form" method="post">
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="username">* Name:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="username" id="username" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Type</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Maneger</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="email">* Address:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="address" name="address" id="address" class="form-control" data-rule-required="true" data-rule-email="true" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* City:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="city" id="city" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* State:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="state" id="state" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Zip Code:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="zipcode" id="zipcode" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Property Type:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Select Property Type</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Project Type:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="1" name="remodel"> Remodel
+</label>
+<label class="radio-inline">
+<input type="radio" value="2" name="remodel"> Development
+</label> 
+<label class="radio-inline">
+<input type="radio" value="3" name="remodel"> Entitlements
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* APN:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="apn" id="apn" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Off Market:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="4" name="yes"> yes
+</label>
+<label class="radio-inline">
+<input type="radio" value="5" name="yes"> no
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Sale Type:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Select Sale Type</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Area:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="area" id="area" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Lot Size:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="lotsize" id="lotsize" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Bed Count:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="bedcount" id="bedcount" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Bath Count:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="bathcount" id="bathcount" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Electicity Supplier:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="electicitysupplier" id="electicitysupplier" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Meter Readings:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="meterreadings" id="meterreadings" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Water Supplier:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="watersupplier" id="watersupplier" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Meter Readings:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="meterreadings" id="meterreadings" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Gas Readings:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="gasreadings" id="gasreadings" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Meter Readings:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="meterreadings" id="meterreadings" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="box box-black">
+<div class="box-title">
+<h3>Additional Information</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+<div class="box-content">
+<form action="#" class="form-horizontal" id="validation-form" method="post">
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Vacant:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="6" name="Partially"> Yes
+</label>
+<label class="radio-inline">
+<input type="radio" value="7" name="Partially"> No
+</label> 
+<label class="radio-inline">
+<input type="radio" value="8" name="Partially"> Partially Unknown
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Occupant:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="9" name="Ex-Owner"> Ex-Owner
+</label>
+<label class="radio-inline">
+<input type="radio" value="10" name="Ex-Owner"> Tenant
+</label> 
+<label class="radio-inline">
+<input type="radio" value="11" name="Ex-Owner"> Squatter
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Notice Served</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">NA</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Server:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="watersupplier" id="watersupplier" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Alarm:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Needed</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Trash Removal:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Needed</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Permits:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Needed</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* City Violations:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="12" name="Completed"> No
+</label>
+<label class="radio-inline">
+<input type="radio" value="13" name="Completed"> Yes
+</label> 
+<label class="radio-inline">
+<input type="radio" value="14" name="Completed"> Completed
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Reap:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="12" name="Completed1"> No
+</label>
+<label class="radio-inline">
+<input type="radio" value="13" name="Completed1"> Yes
+</label> 
+<label class="radio-inline">
+<input type="radio" value="14" name="Completed1"> Completed
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Outstanding:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="12" name="Completed2"> No
+</label>
+<label class="radio-inline">
+<input type="radio" value="13" name="Completed2"> Yes
+</label> 
+<label class="radio-inline">
+<input type="radio" value="14" name="Completed2"> Completed
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Survey:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="12" name="Completed3"> No
+</label>
+<label class="radio-inline">
+<input type="radio" value="13" name="Completed3"> Yes
+</label> 
+<label class="radio-inline">
+<input type="radio" value="14" name="Completed3"> Completed
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Soils Report:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Ordered</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Architect:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Ordered</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Tract Map:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Submitted</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Fire Department:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Submitted</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Planning Department:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Submitted</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Building Department:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Submitted</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Water Department:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Submitted</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* Public Hearing:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Wating for Date</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+<div class="form-group">
+<label for="select" class="col-sm-3 col-lg-2 control-label">* City Council:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<select class="form-control" name="select" id="select" data-rule-required="true">
+<option value="">-- Please select --</option>
+<option value="1">Wating for Date</option>
+<option value="2">Option-2</option>
+<option value="3">Option-3</option>
+<option value="4">Option-4</option>
+<option value="5">Option-5</option>
+<option value="6">Option-6</option>
+<option value="7">Option-7</option>
+<option value="8">Option-8</option>
+<option value="9">Option-9</option>
+<option value="10">Option-10</option>
+</select>
+</div>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="box box-black">
+<div class="box-title">
+<h3>Price Details</h3>
+<div class="box-tool">
+<a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+<div class="box-content">
+<form action="#" class="form-horizontal" id="validation-form" method="post">
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Purchase Estimate:</label>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="purchaseestimate" id="purchaseestimate" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+<div style="float:left;margin:10px">Final</div>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="purchaseestimate1" id="purchaseestimate1" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Rehab Cost:</label>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="rehabcost" id="rehabcost" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+<div style="float:left;margin:10px">Final</div>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="rehabcost1" id="rehabcost1" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Miscellaneous Cost:</label>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="miscellaneous" id="miscellaneous" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+<div style="float:left;margin:10px">Final</div>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="miscellaneous1" id="miscellaneous1" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Sales Proceeds:</label>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="salesproceeds" id="salesproceeds" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+<div style="float:left;margin:10px">Final</div>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="salesproceeds1" id="salesproceeds1" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Total Profit Earned:</label>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="totalprofitearned" id="totalprofitearned" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+<div style="float:left;margin:10px">Final</div>
+<div class="col-sm-6 col-md-2 controls">
+<input type="text" name="totalprofitearned1" id="totalprofitearned1" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Listing Price:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="listingprice" id="listingprice" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Purchase Date:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="purchasedate" id="purchasedate" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Closing Date:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="closingdate" id="closingdate" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label" for="password">* Days Owned:</label>
+<div class="col-sm-6 col-lg-5 controls">
+<input type="text" name="daysowned" id="daysowned" class="form-control" data-rule-required="true" data-rule-minlength="6" />
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-3 col-lg-2 control-label">* Property Status:</label>
+<div class="col-sm-9 col-lg-10 controls">
+<label class="radio-inline">
+<input type="radio" checked="" value="15" name="Completed4"> Publish
+</label>
+<label class="radio-inline">
+<input type="radio" value="16" name="Completed4"> Unpublish
+</label> 
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+<input type="submit" class="btn btn-primary" value="Submit">
+<button type="button" class="btn">Reset</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- END Main Content -->
+
+<footer>
+<p>2015 &copy; F3holding Admin Template.</p>
+</footer>
+
+<a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+<!-- END Content -->
+</div>
+<!-- END Container -->
+
+
+<!--basic scripts-->
+<script src="js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+
+
+<!--flaty scripts-->
+<script src="js/flaty.js"></script>
+<script src="js/flaty-demo-codes.js"></script>
+
+</body>
+</html>
