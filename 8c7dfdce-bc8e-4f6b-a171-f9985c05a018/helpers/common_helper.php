@@ -64,3 +64,68 @@ if(!function_exists('checkExistsUUID'))
         }
     }
 }
+
+/**
+ *
+ */
+if (!function_exists('sendMailOtp')) {
+    function sendMailOtp($to, $otp) {
+        $CI =& get_instance();
+
+        // config data for local server
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'info@bindasstech.com', // change it to yours
+            'smtp_pass' => '*****', // change it to yours
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1',
+            'wordwrap' => TRUE
+        );
+
+        // Load email library for localhost and live server
+        if ($_SERVER['REMOTE_ADDR'] == '::1' || $_SERVER['REMOTE_ADDR'] == '127.0.0.1') {
+            $CI->load->library('email', $config);
+        } else {
+            $CI->load->library('email');
+        }
+
+        $CI->email->from($CI->config->item('fromEmail'), 'Bindasstech');
+        $CI->email->to($to);
+
+        $CI->email->subject('OTP For Login Access');
+        $CI->email->message('Your OTP is '. $otp);
+
+        $CI->email->send();
+    }
+}
+
+/**
+ * Authentication to check session data is set or not and successfully logged in or not
+ * This method should be called from constructor method from all controller
+ * If user try to access different page by typing in url should be redirected to dashboard page
+ *
+ */
+if (!function_exists('checkAuthentication')) {
+    function checkAuthentication() {
+        $CI =& get_instance();
+        if (!$CI->session->userdata('ISLOGIN')) {
+            redirect(base_url() . 'login');
+        } else {
+            // get current url
+            $current_url = base_url(uri_string());
+
+            // redirect to user specific dashboard if user tries to access other user's functionality by typing in url
+            if ($CI->session->userdata('USER_TYPE_ID') == 1) { // for super admin
+                if (strpos($current_url, base_url() . 'admin') === false) {
+                    redirect(base_url() . '' . $CI->session->userdata('REDIRECT_URL'));
+                }
+            } elseif ($CI->session->userdata('USER_TYPE_ID') == 2) {
+                if (strpos($current_url, base_url() . 'distributor') === false) {
+                    redirect(base_url() . '' . $CI->session->userdata('REDIRECT_URL'));
+                }
+            } else {}
+        }
+    }
+}

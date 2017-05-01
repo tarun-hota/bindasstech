@@ -14,6 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends CI_Controller{
     public function __construct(){
         parent::__construct();
+        checkAuthentication();
     }
     public function _remap($method='index')
     {
@@ -29,8 +30,13 @@ class Dashboard extends CI_Controller{
         }
         
     }
-    public function _rationingDashboardIndex()
-    {
-        echo 'gjss';
+    public function _rationingDashboardIndex(){
+        $this->body_data['title']='Rationing System | Distributor Dashboard';
+        $this->body_data['session_data'] = $this->session->userdata();
+
+        // load views
+        $this->load->view('distributor/include/header', $this->body_data, FALSE);
+        $this->load->view('distributor/templates/dashboard', $this->body_data, FALSE);
+        $this->load->view('distributor/include/footer', $this->body_data, FALSE);
     }
 }

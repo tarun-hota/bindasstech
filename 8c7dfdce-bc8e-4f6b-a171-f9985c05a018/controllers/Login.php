@@ -20,14 +20,28 @@ class Login extends CI_Controller{
         $this->resource_data=FALSE;
     }
 
-    public function _rationingLoginIndex() {
+    /*public function _rationingLoginIndex() {
         if($this->session->userdata('ISLOGIN')  ) :
                 redirect(URL.$this->session->userdata('REDIRECT_URL').'dashboard');
         else:
                 $this->body_data['title']='Rationing System | Login';
                 $this->load->view('login/login',$this->body_data,FALSE);
         endif;
+    }*/
+
+    /**
+     * Index view / Default view\
+     *
+     */
+    public function _rationingLoginIndex() {
+        if($this->session->userdata('ISLOGIN')) :
+            redirect(URL.$this->session->userdata('REDIRECT_URL').'dashboard');
+        else:
+            $this->body_data['title']='Rationing System | Login';
+            $this->load->view('login/login',$this->body_data,FALSE);
+        endif;
     }
+
     public function _remap($method='index')
     {
         try {
@@ -40,7 +54,7 @@ class Login extends CI_Controller{
         } catch (Exception $ex) {
             show_404();
         }
-        
+
     }
     public function _rationingLoginChecklogindata()
     {
@@ -143,5 +157,98 @@ class Login extends CI_Controller{
         {
             redirect('login', 'refresh');
         }
+    }
+
+    /**
+     * Login ajax
+     *
+     * @param username (request data)
+     * @param password (request data)
+     *
+     * @return otp (int)
+     */
+    public function _rationingLoginChecklogin() {
+        // get ajax post data
+        if (!$this->input->post('username') || !$this->input->post('password')) {
+            throw new Exception("Request data not found",404);
+        }
+
+        // load login model
+        $this->load->model('Loginmodel');
+
+        // user check login by accessing model
+        if ($this->Loginmodel->checkLogin()) {
+            // generate random number for otp
+            $otp = random_string('numeric', 4);
+
+            // set session data to use after otp enter
+            $this->session->set_userdata('user_uuid', $this->Loginmodel->data_resource->row()->user_uuid);
+            $this->session->set_userdata('otp', $otp);
+
+            // send email for otp
+            sendMailOtp($this->Loginmodel->data_resource->row()->email_id, $otp);
+
+            echo $otp;
+        }
+
+    }
+
+    /**
+     * OTP check ajax after login
+     *
+     * @param otp (request data)
+     *
+     * @return (string) success
+     */
+    public function _rationingLoginOtpcheck() {
+        // get ajax post data
+        if (!$this->input->post('otp')) {
+            throw new Exception("Request data not found",404);
+        }
+
+        // check intput otp with session otp
+        if (isset($this->session->userdata['otp'])
+            && $this->session->userdata['otp'] == $this->input->post('otp')
+            && isset($this->session->userdata['user_uuid'])) {
+
+            // get user details from login model and set user details into session
+            $this->load->model('Loginmodel');
+            if ($this->Loginmodel->getUserDetails($this->session->userdata['user_uuid'])) {
+
+                // set session data
+                $this->session->set_userdata('ISLOGIN', TRUE);
+                $this->session->set_userdata('LOGIN_ID', $this->Loginmodel->data_resource->row()->login_id);
+                $this->session->set_userdata('DISPLAY_NAME', $this->Loginmodel->data_resource->row()->display_name);
+                $this->session->set_userdata('USER_TYPE_ID', $this->Loginmodel->data_resource->row()->id);
+                $this->session->set_userdata('USER_TYPE_NAME', $this->Loginmodel->data_resource->row()->user_type);
+                $this->session->set_userdata('EMAIL_ID', $this->Loginmodel->data_resource->row()->email_id);
+                $this->session->set_userdata('USER_CODE', $this->Loginmodel->data_resource->row()->user_code);
+                $this->session->set_userdata('SHORT_CODE', $this->Loginmodel->data_resource->row()->short_code);
+                $this->session->set_userdata('REDIRECT_URL', $this->Loginmodel->data_resource->row()->redirect_url);
+                $this->session->set_userdata('FIRST_NAME', $this->Loginmodel->data_resource->row()->first_name);
+                $this->session->set_userdata('LAST_NAME', $this->Loginmodel->data_resource->row()->last_name);
+                $this->session->set_userdata('MIDDlE_NAME', $this->Loginmodel->data_resource->row()->middle_name);
+                $this->session->set_userdata('ADDRESS', $this->Loginmodel->data_resource->row()->address);
+                $this->session->set_userdata('STATE', $this->Loginmodel->data_resource->row()->state);
+                $this->session->set_userdata('CITY', $this->Loginmodel->data_resource->row()->city);
+                $this->session->set_userdata('COUNTRY', $this->Loginmodel->data_resource->row()->country);
+                $this->session->set_userdata('PINCODE', $this->Loginmodel->data_resource->row()->pincode);
+                $this->session->set_userdata('CONTACT_NO', $this->Loginmodel->data_resource->row()->contact_no);
+
+                // unset previous session data which is inserted before entering otp
+                $this->session->unset_userdata['user_uuid'];
+                $this->session->unset_userdata['otp'];
+
+                echo 'success';
+            }
+        }
+    }
+
+    /**
+     * Logout and unset session datA
+     */
+    public function _rationingLoginLogout() {
+        $this->session->sess_destroy();
+        echo 'success';
     }
 }

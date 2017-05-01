@@ -87,11 +87,12 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 //directory roots
 
 define('ROOT_FOLDER', '/');
-define('URL', 'http://bindasstech.com/rationingsys'.ROOT_FOLDER);
+define('URL', 'http://localhost/bindasstech'.ROOT_FOLDER);
 define('CSSPATH',URL.'27e93e32-9c96-4b50-a29a-53148f805197/css/');
 define('JSPATH',URL.'27e93e32-9c96-4b50-a29a-53148f805197/js/');
 define('IMAGEPATH',URL.'27e93e32-9c96-4b50-a29a-53148f805197/images/');
 define('DISTRIBUTER_ROOT', '5c71dfce-fe8e-4f6a-a171-f1985c05a018/');
+define('JSVERSION', '1');
 
 //database table name
 
